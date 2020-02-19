@@ -16,10 +16,10 @@
 
     $sql = "CREATE TABLE IF NOT EXISTS tbtest"
     ." ("
-	  . "id INT AUTO_INCREMENT PRIMARY KEY,"
-	  . "name char(32),"
+    . "id INT AUTO_INCREMENT PRIMARY KEY,"
+    . "name char(32),"
     . "comment TEXT"
-	  .");";
+    .");";
     $stmt = $pdo->query($sql);  //queryメソッドは引数に指定したSQL文をデータベースに対して実行する
 
   ?>
