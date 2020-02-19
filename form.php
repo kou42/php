@@ -5,7 +5,7 @@
     $filename = "mission_3-5.txt";
     $fp = fopen($filename, "a");
     $comments = array();
-    $password = "techbase";
+    $password = "secret";
   ?>
 
   <p style="height:50px; background-color:#fff;"></p>
