@@ -12,7 +12,7 @@
 
   <form method="POST">
     <p> 編集番号: <input type="text" value="" name="edit"> </p>
-    <p> パスワード: <input type="text" value="" name="edit_pass"> <input type="submit" value="編集"> </p>
+    <p> パスワード: <input type="password" value="" name="edit_pass"> <input type="submit" value="編集"> </p>
 
     <?php 
       $name = "";
@@ -34,16 +34,16 @@
     <p> <input type="hidden" value="<?php if($edit_number != 0) echo $edit_number; ?>" name = "judge"> </p>
     <p> 名前: <input type="text" value="<?php echo $name; ?>" name="name"> </p>
     <p> コメント: <input type="text" value="<?php echo $comm; ?>" name="comment"> </p>
-    <p> パスワード: <input type="text" value="" name="comme_pass"> <input type="submit" value="送信"> </p>
+    <p> パスワード: <input type="password" value="" name="comme_pass"> <input type="submit" value="送信"> </p>
 
     <p> 削除番号: <input type="text" value="" name="delete"> </p>
-    <p> パスワード: <input type="text" name="delete_pass"> <input type="submit" value="削除"> </p>
+    <p> パスワード: <input type="password" name="delete_pass"> <input type="submit" value="削除"> </p>
   
   </form>  
 
   <?php 
       
-      if(!empty($_POST["judge"]) && strcmp($password, $_POST["comme_pass"]) == 0){
+    if(!empty($_POST["judge"]) && strcmp($password, $_POST["comme_pass"]) == 0){
       $comments = $comments = file($filename,FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); 
       foreach($comments as $comme){
         $split = explode("<>",$comme);
