@@ -66,7 +66,7 @@
   <?php
 
     if(!empty($_POST["judge"]) && strcmp($pass, $_POST["comme_pass"]) == 0){
-      echo "編集in<br/>";
+      //echo "編集in<br/>";
       $id = $_POST["judge"];
       $name = $_POST["name"];
       $comment = $_POST["comment"];
@@ -80,7 +80,7 @@
       $stmt->execute();
     }
     elseif(!empty($_POST["delete"]) && strcmp($pass, $_POST["delete_pass"]) == 0){
-      echo "削除in<br/>";
+      //echo "削除in<br/>";
       $id = $_POST["delete"];
       $sql = 'delete from tbtest where id=:id';
       $stmt = $pdo->prepare($sql);
@@ -89,7 +89,7 @@
     }
     
     elseif(!empty($_POST["name"]) && !empty($_POST["comment"]) && empty($_POST["judge"]) && strcmp($pass,$_POST["comme_pass"]) == 0){
-      echo "新規投稿in<br/>";
+      //echo "新規投稿in<br/>";
       $sql = $pdo -> prepare("INSERT INTO tbtest (name, comment) VALUES (:name, :comment)");
       $sql -> bindParam(':name', $name, PDO::PARAM_STR);
       $sql -> bindParam(':comment', $comment, PDO::PARAM_STR);
