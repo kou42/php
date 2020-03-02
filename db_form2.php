@@ -37,10 +37,10 @@
   
   <?php
     $flag = 0; //正しく情報を発信できたのか判定をするための変数
-    $pass = "techbase";
-    $dsn = 'mysql:dbname=tb210889db;host=localhost'; // ***** の部分は自分のIDを入力してください
-    $user = 'tb-210889'; //***** の部分は自分のIDを入力してください
-    $password = 'amn2MjFLtD'; // ******の部分は自分のパスワードを入力してください
+    $pass = "";
+    $dsn = 'mysql:dbname=******db;host=localhost'; // ***** の部分は自分のIDを入力してください
+    $user = '******'; //***** の部分は自分のIDを入力してください
+    $password = '*******'; // ******の部分は自分のパスワードを入力してください
     $pdo = new PDO($dsn, $user, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
 
     $sql = "CREATE TABLE IF NOT EXISTS tbtest"
